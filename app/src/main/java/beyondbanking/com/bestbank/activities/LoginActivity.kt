@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.view.inputmethod.InputMethodManager
+import beyondbanking.com.bestbank.activities.DebitCardActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -14,5 +15,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        login_button.setOnClickListener({v -> startActivity(DebitCardActivity.getStartIntent(this))})
     }
 }
